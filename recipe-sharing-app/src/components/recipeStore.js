@@ -38,19 +38,19 @@ const useRecipeStore = create((set) => ({
           : recipe
       ),
     })),
-  favourites: [],
-  addFavourite: (recipeId) =>
-    set((state) => ({ favourites: [...state.favourites, recipeId] })),
+  favorites: [],
+  addFavorite: (recipeId) =>
+    set((state) => ({ favorites: [...state.favorites, recipeId] })),
 
-  removeFavourite: (recipeId) =>
+  removeFavorite: (recipeId) =>
     set((state) => ({
-      favourites: state.favourites.filter(id => id !== recipeId)
+      favorites: state.favorites.filter(id => id !== recipeId)
     })),
   
   recommendations: [],
   generateRecommendations: () => set(state => {
     const recommended = state.recipes.filter(recipe =>
-      state.favourites.includes(recipe.id) && Math.random() > 0.5
+      state.favorites.includes(recipe.id) && Math.random() > 0.5
     );
     return { recommendations: recommended };
   })
