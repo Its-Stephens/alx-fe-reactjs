@@ -3,6 +3,8 @@ import AddRecipeForm from "./components/AddRecipeForm";
 import SearchBar from "./components/SearchBar";
 import RecipeList from "./components/RecipeList";
 import RecipeDetails from "./components/RecipeDetails";
+import FavoritesList from "./components/FavoritesList";
+import RecommendationsList from "./components/RecommendationsList";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
           <>
             <SearchBar />
             <RecipeList />
+            <FavoritesList />
+            <RecommendationsList />
             <AddRecipeForm />
           </>
         }
